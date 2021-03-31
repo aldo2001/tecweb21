@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio 4 - formularios</title>
+</head>
+<body>
+    <header>
+
+    </header>
+    <main>
+        <!--action= url a donnde se mandan los datos del formulario
+        GET= los datos se mandan  en url
+        POST= se mandan con la pagina (body)
+        POST
+            universidad=IPN
+            escuela=upiiz
+            ramaconocimiento=2
+            grado=3
+            estatus=2
+            promedio=8
+            semestre=4
+        GET
+        ?universidad=IPN&escuela=upiiz&ramaconocimiento=2&grado=3&estatus=2&promedio=8&semestre=4
+        -->
+        <form action="registro.php" method="GET">
+            <table align="center">
+                <tr>
+                    <td><label for="universidad">Universidad</label></td>
+                    <td> <input type="text" name="universidad" id="universidad"></td>
+                </tr>
+                <tr>
+                    <td><label for="escuela"> Escuela</label></td>
+                    <td>  <input type="text" name="escuela" id="escuela"></td>
+                </tr>
+                <tr>
+                    <td><label>Rama</label></td>
+                    <td>
+
+            
+                        <!-- Base de datos= tabla
+                        rama conocimiento
+                        id autoincremento
+                        descripcion text[75]
+                        1 Fisico-Matematico
+                        2 Quimico-Biologico
+                        3 Ciencias-Sociales-->
+                        <select name="ramaconocimiento" id="ramaconocimiento">
+                            <option></option>
+                            <option value="1">Fisico-Matematico</option>
+                            <option value="2">Quimico-Biologicas</option>
+                            <option value="3">Ciencias-Sociales</option>
+            
+                        </select></td>
+                </tr>
+                <tr>
+                    <td><!--
+                        SAES=
+                        Tabla gradoacademico
+                        id intautoincrement
+                        descripcion varchart[75]
+        
+                        1 Doctorado
+                        2 Maestria
+                        3 Especialidad
+                        4 Licenciatura
+                        5 Nivel Medio Superior
+                    -->
+                    <label>Grado</label></td>
+                    <td>   
+                        <select name="grado" id="grado">
+                            <option></option>
+                            <option value="1">Doctorado</option>
+                            <option value="2">Maestria</option>
+                            <option value="3">Especialidad</option>
+                            <option value="4">Licenciatura</option>
+                            <option value="5">Nivel Medio Superior</option>
+                        </select>
+                    <label>
+                        <input type="radio" value="1" name="estatus" id="estatus">Incompleto
+                    </label>
+                    <label>
+                        <input type="radio" value="2" name="estatus" id="estatus">Completo
+                    </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="promedio">Promedio</label></td>
+                    <td><input type="number" name="promedio" id="promedio" value="1" min="1" max="10" </td>
+                    <label>
+                        <input type="number" name="semestre" id="semestre" min="1">Semestre
+                    </label>
+                </tr>
+                <tr>
+                    <td><label>Experiencia</label></td>
+                    <td>
+                        <label>
+                            <input type="number" name="experiencia" id="experiencia" min="1">Años
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>Pagina web</label></td>
+                    <td>
+                    
+                            <input type="url" name="sitioweb" id="sitioweb" value="http://">
+                       
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="Registrarse"></td>
+                    <td><input type="submit" value="Limpiar Campo"></td>
+                </tr>
+            </table>
+        </form>
+    </main>
+    <footer></footer>
+</body>
+</html>
